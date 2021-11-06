@@ -14,9 +14,6 @@ let wrapRun = (run) => {
 let versions = [{
   name: 'webpack',
   module: require('webpack'),
-}, {
-  name: 'webpack5',
-  module: require('webpack5'),
 }]
 
 let getWarningMessage = (stats, index) => {
