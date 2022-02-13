@@ -28,7 +28,7 @@ class CircularDependencyPlugin {
 
         const graph = webpackDependencyGraph(compilation, modules, plugin, this.options);
 
-        cycleDetector(graph, (cycle) => {
+        cycleDetector(graph, this.options, (cycle) => {
           // print modules as paths in error messages
           const cyclicalPaths = cycle.map(
             (module) => path.relative(cwd, module.resource));
@@ -123,9 +123,9 @@ function webpackDependencyGraph(compilation, modules, plugin, options) {
  *
  * The graph is acyclic iff the callback is not called.
  */
-function cycleDetector(graph, cycleCallback) {
+function cycleDetector(graph, options, cycleCallback) {
   // checking that there are no cycles is much faster than actually listing cycles
-  if (isAcyclic(graph))
+  if (isAcyclic(graph, options))
     return;
 
   /**
