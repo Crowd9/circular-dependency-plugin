@@ -39,8 +39,5 @@
     "testMatch": [
       "**/?(*.)(spec|test).js?(x)"
     ]
-  },
-  "dependencies": {
-    "semver": "^7.3.5"
   }
 }
