@@ -23,7 +23,8 @@
     "test": "jest"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "is-acyclic.js"
   ],
   "repository": {
     "type": "git",
