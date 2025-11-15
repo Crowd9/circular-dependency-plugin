@@ -2,7 +2,7 @@
   "name": "circular-dependency-plugin",
   "main": "index.js",
   "devDependencies": {
-    "jest": "^29.5.0",
+    "jest": "^30.2.0",
     "memory-fs": "^0.5.0",
     "ts-loader": "^9.5.4",
     "typescript": "^5.9.3",
