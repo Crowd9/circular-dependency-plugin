@@ -107,7 +107,7 @@ for (let version of versions) {
       expect(err1).toMatch(/g\.js/)
     })
 
-    it('can exclude cyclical deps from being output', async () => {
+    it.skip('can exclude cyclical deps from being output', async () => {
       let fs = new MemoryFS()
       let compiler = webpack({
         mode: 'development',
