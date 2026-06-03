@@ -20,6 +20,7 @@ class CircularDependencyPlugin {
     let plugin = this
     let cwd = this.options.cwd
 
+    console.log('test');
     compiler.hooks.compilation.tap(PluginTitle, (compilation) => {
       compilation.hooks.optimizeModules.tap(PluginTitle, (modules) => {
         if (plugin.options.onStart) {
